@@ -1,0 +1,427 @@
+/* =========================================================
+Common styles
+============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+body {
+    color: #525252;
+    font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-size: 14px;
+	background-color: #f7f7f7;
+}
+ol, ul {
+    list-style: none;
+}
+hr {
+    color: #e6e6e6;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #e6e6e6;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+h1, h2, h3, h4 {
+	font-weight: normal;
+	display: inline-block;
+	vertical-align: middle;
+}
+h1 {
+	font-size: 24px;
+	color: #333
+}
+h2 {
+	font-size: 18px;
+	color: #555;
+}
+h3{
+	font-size: 16px;
+	color: #131212;
+}
+h4 {
+	font-size: 15px;
+	color: #202026;
+}
+p{
+	font-size: 12px;
+	color: #666;
+	line-height: 20px;
+}
+strong {
+	font-weight: bold;
+}
+small{
+	margin-left: 5px;
+	color: #b90000;
+}
+a {
+	outline: none;
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+:focus {
+	outline: 0 !important;
+}
+a:hover {
+	text-decoration: none;
+	color: #b90000;
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+a:link {
+	text-decoration: none;
+}
+a:focus {
+	color: #ccc;
+	text-decoration: none;
+}
+img:hover {
+	opacity: 0.8;
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+/*------responsive image----------------*/
+.responsive-img{
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+blockquote {
+    line-height: 20px;
+	background-color:#f6f6f6;
+	padding:20px;
+	border-left:5px solid #eaeaea;
+}
+.c_w {
+	color: #fff !important;
+}
+.c_3 {
+	color: #333 !important;
+}
+.c_6 {
+	color: #666 !important;
+}
+.c_9 {
+	color: #999 !important;
+}
+.c_c {
+	color: #ccc !important;
+}
+.c_r {
+	color: #ff6c60 !important;
+}
+.c_y {
+	color: #f8ac59 !important;
+}
+.c_g {
+	color: #1ab394 !important;
+}
+.c_o {
+	color: #E86638 !important;
+}
+.t-center{
+	text-align: center;
+}
+/* 通用多列布局 */
+.ulbox{
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+}
+.newspaper
+{
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	column-count:3;
+}
+/* =========================================================
+Clear Floated Elements
+============================================================ */
+.left{
+	float:left;
+}
+.right{
+	float:right;
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;  height: 0;
+}
+.clearfix:before,.clearfix:after{
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+ }
+.clearfix:after{
+	clear: both;
+}
+.clearfix{
+	zoom: 1;
+}
+.hover-effect{
+	cursor:pointer;
+	z-index:100;
+}
+.w100{
+	width: 100% !important;
+}
+.m-r-20{
+	margin-right: 20px;
+}
+.m-t-15{
+	margin-top: 15px;
+}
+.m-t-30{
+	margin-top: 30px;
+}
+.m-r-15{
+	margin-right: 15px;
+}
+
+/* =========================================================
+	Columns
+============================================================ */
+.box{
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+header{
+	height:60px;
+	background: #131212;
+}
+header:after{
+	clear: both;
+}
+.headercont{
+	width: 1200px;
+	margin: 0 auto;
+}
+nav,.logo{
+	height: 60px;
+}
+nav>ul>li{
+	height: 60px;
+	line-height: 60px;
+	margin: 0 10px;
+}
+nav>ul>li a{
+	color: #fff;
+	font-size: 16px;
+}
+.cont-box{
+	overflow: hidden;
+	font-size: 0;
+	margin: 10px 0 10px 0;
+}
+.cont-box article{
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: top;
+	width: 800px;
+}
+.tiptitle{
+	border-bottom: 1px solid #eee;
+	margin-bottom: 10px;
+}
+.tiptitle>h2,.tiptitle>h2{
+	font-size: 18px;
+	margin: 10px;
+}
+.cont-box aside{
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: top;
+	width: 380px;
+	margin-left: 20px;
+}
+.column2{
+	box-flex-group: 2;
+}
+.column2 li{
+	flex: 1 0 auto;
+	width: 50%;
+}
+.maincont .simg{
+	float: left;
+	margin: 5px 10px 5px 5px;
+}
+.maincont h3{
+	margin: 10px 0;
+}
+.column3{
+	box-flex-group: 3;
+}
+.column3 li{
+	flex: 1 0 auto;
+	width: 33.33333333%;
+}
+.column4{
+	box-flex-group: 4;
+}
+.column4 li{
+	flex: 1 0 auto;
+	width: 25%;
+}
+.column6{
+	box-flex-group: 6;
+}
+.column6 li{
+	flex: 1 0 auto;
+	width: 16.66666667%;
+}
+
+.keywordspan{
+	 padding: 10px;
+}
+.keywordspan a{
+	color: #333333;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 5px 8px;
+}
+.keywordspan a:hover{
+	color: #b90000;
+}
+.txtmargin li{
+	margin: 5px 0;
+	text-align: center;
+}
+.txtmargin2 li{
+	margin: 10px 0;
+}
+.box-s{
+	box-shadow: 0 0 2px 2px #f8f8f8;
+	margin: 5px;
+	overflow: hidden;
+}
+.box-s:hover{
+	box-shadow: 0 0 2px 2px rgba(183, 0, 0, 0.17);
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+}
+.article{
+	padding: 15px;
+	overflow: hidden;
+}
+.article img{
+	max-width: 100%;
+}
+.article h1{
+	font-size: 30px;
+	color: #333;
+	line-heigth: 2em;
+}
+.article .author{
+	margin: 15px auto;
+	color: #999;
+}
+.listspan span{
+	display: inline-block;
+	vertical-align: middle;
+	margin: 8px 30px;
+}
+/* 分页样式 */
+.fenye_box {
+	display: block;
+	text-align: right;
+	font-size: 0;
+	margin: 20px;
+}
+.fenye_box span {
+	margin: 0 2px;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 4px 8px;
+	background: #ccc;
+	cursor: pointer;
+}
+.fenye_box .active {
+	background: #b90000;
+	color: #fff;
+}
+
+/* /分页样式 */
+
+
+/* footer */
+.container {
+	width: 1170px;
+}
+.footer_box{
+	background: #131212;
+	padding: 50px 0 20px;
+}
+footer{
+	margin: 0 auto;
+	color: #fff;
+	position: relative;
+}
+footer a{
+	color: #fff;
+}
+.foot_list{
+	display: block;
+}
+.foot_ewm {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 125px;
+	height: 170px;
+}
+.foot_ewm p{
+	font-size: 12px;
+	color: #ccc;
+	margin-top: 5px;
+	padding: 0;
+}
+.foot_ewm img{
+	width: 100%;
+}
+.foot_bottom{
+	text-align: center;
+	margin-top: 40px;
+	color: #ccc;
+}
+.foot_logo {
+	width: 42px;
+	height: 25px;
+	margin-right: 5px;
+	display: inline-block;
+	vertical-align: middle;
+	background: url("http://placehold.it/80x50") no-repeat;
+	background-size: 100% 100%;
+}
+.foot_list dl {
+	margin-right: 110px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	line-height: 1.8em;
+}
+.foot_list dt {
+	font-size: 14px;
+}
