@@ -425,3 +425,44 @@ footer a{
 .foot_list dt {
 	font-size: 14px;
 }
+@media screen and (max-width: 1200px) {
+	body {
+		background-color:lightblue;
+	}
+	.headercont {
+		width: auto;
+		margin: 0 auto;
+	}
+	.box {
+		width: auto;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+	.cont-box article {
+		font-size: 14px;
+		display: inline-block;
+		vertical-align: top;
+		width: auto;
+	}
+	.cont-box aside {
+		font-size: 14px;
+		display: inline-block;
+		vertical-align: top;
+		width: auto;
+		margin-left: 0;
+	}
+	.container {
+		width: auto;
+	}
+}
+/*@media screen and (max-width: 992px) {
+	body {
+		background-color:blue;
+	}
+}
+@media screen and (max-width: 768px) {
+	body {
+		background-color:red;
+	}
+}*/
+
