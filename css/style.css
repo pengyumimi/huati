@@ -292,8 +292,10 @@ nav>ul>li a{
 
 .keywordspan{
 	 padding: 10px;
+	 font-size: 0;
 }
 .keywordspan a{
+	font-size: 16px;
 	color: #333333;
 	display: inline-block;
 	vertical-align: middle;
@@ -301,6 +303,18 @@ nav>ul>li a{
 }
 .keywordspan a:hover{
 	color: #b90000;
+}
+.longword a{
+    width: 33%;
+    box-sizing: border-box;
+    margin: 5px 0;
+    padding: 0 10px;
+	overflow: hidden;
+	-ms-text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	word-wrap:normal;
 }
 .txtmargin li{
 	margin: 5px 0;

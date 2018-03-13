@@ -1,13 +1,13 @@
 $(document).ready(function(){                          
     var index=0;
-    var length=$(".imglist img").length;
+    var length=$(".imglist ul li").length;
     var i=1;
     
     //关键函数：通过控制i ，来显示图片
     function showImg(i){
-        $(".imglist img")
+        $(".imglist ul li")
             .eq(i).stop(true,true).fadeIn(800)
-            .siblings("img").hide();
+            .siblings("ul li").hide();
          $(".cbtn li")
             .eq(i).addClass("hov")
             .siblings().removeClass("hov");
@@ -41,7 +41,7 @@ $(document).ready(function(){
                $(".cSlideUl ul").animate({ "left": "+=142px" },200)
                i--;
     }	
-    $(".imglist img").eq(0).show();
+    $(".imglist ul li").eq(0).show();
     $(".cbtn li").eq(0).addClass("hov");
     $(".cbtn tt").each(function(e){
         var str=(e+1)+"/"+length;
