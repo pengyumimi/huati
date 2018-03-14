@@ -181,6 +181,9 @@ Clear Floated Elements
 	cursor:pointer;
 	z-index:100;
 }
+.block{
+    display: block;
+}
 .w100{
 	width: 100% !important;
 }
@@ -442,6 +445,7 @@ footer a{
 .foot_list dt {
 	font-size: 14px;
 }
+
 @media screen and (max-width: 1200px) {
 	body {
 		background-color:lightblue;
@@ -471,8 +475,18 @@ footer a{
 	.container {
 		width: auto;
 	}
+    .sm-column2{
+	   box-flex-group: 2;
+    }
+    .sm-column2 li{
+        flex: 1 0 auto;
+        width: 50%;
+    }
+    
 }
-/*@media screen and (max-width: 992px) {
+/*
+
+@media screen and (max-width: 992px) {
 	body {
 		background-color:blue;
 	}
@@ -481,5 +495,6 @@ footer a{
 	body {
 		background-color:red;
 	}
-}*/
+}
+*/
 
