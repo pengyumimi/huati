@@ -208,6 +208,7 @@ Clear Floated Elements
 	margin: 0 auto;
 	background-color: #fff;
 }
+/*header begin*/
 header{
 	height:60px;
 	background: #131212;
@@ -219,18 +220,36 @@ header:after{
 	width: 1200px;
 	margin: 0 auto;
 }
-nav,.logo{
-	height: 60px;
+.phonetop{
+    display: none;
 }
-nav>ul>li{
+#tm{
+    display: none;
+}
+.phonelogo{
+    display: none;
+}
+.pcsidenav,.logo{
+	height: 50px;
+}
+.pcsidenav{
+    float: right;
+}
+.pcsidenav li{
+    display: inline-block;
+    vertical-align: middle;
 	height: 60px;
 	line-height: 60px;
 	margin: 0 10px;
 }
-nav>ul>li a{
+.pcsidenav li i{
+    margin-right: 10px;
+}
+.pcsidenav li a{
 	color: #fff;
 	font-size: 16px;
 }
+/*header end*/
 .cont-box{
 	overflow: hidden;
 	font-size: 0;
@@ -456,15 +475,134 @@ footer a{
 
 @media screen and (max-width: 1200px) {
 	body {
-		background-color:lightblue;
+		background-color:#f5f5f5;
 	}
 	.headercont {
 		width: auto;
 		margin: 0 auto;
 	}
+    .phonetop{
+        display: block;
+        width: 100%;
+        height: 50px;
+        background: #131212;
+        color: #fff;
+    }
+    .pclogo{
+        display: none;
+    }
+    .phonelogo{
+        display: block;
+    }
 	nav{
 		display: none;
 	}
+    
+    /* 动画效果的手机端菜单栏 begin */
+        
+    header {
+        height: 100%;
+    }
+    #tm {
+        display: none;
+    }
+    /*Content area*/
+    .mainbox, header{
+        transition: all 0.25s;
+    }
+    .navbtn{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 15px;
+        top: 10px;
+        line-height: 30px;
+        font-size: 24px;
+        text-align: center;
+    }
+    .sidenav {
+        width: 135px;
+        height: auto;
+        position: fixed;
+        z-index: 9999;
+        left: -165px;
+        top: 50px;
+        bottom: 0;
+        padding-top: 20px;
+        background: rgb(50, 60, 60);
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.5);
+        transition:width 2s;
+        -moz-transition:width 2s; /* Firefox 4 */
+        -webkit-transition:width 2s; /* Safari and Chrome */
+        -o-transition:width 2s; /* Opera */
+    }
+    .sidenav li {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        margin: 0;
+    }
+    .sidenav li i{
+        margin-right: 0;
+    }
+    .sidenav a {
+        color: white;
+        text-decoration: none;
+    }
+    .sidenav b {
+        font: bold 12px/48px Montserrat;
+        display: block;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.4s;
+    }
+    .sidenav i {
+        display: block;
+        width: 50px;
+        float: left;
+        font-size: 16px;
+        line-height: 48px;
+        text-align: center;
+    }
+    /*Animation controls using checkbox hack*/
+    /*Animate content area to the right*/
+    #tm:checked ~ .sidenav {
+        left: 0;
+    }
+    /*Animate links from right to left + fade in effect*/
+    #tm:checked ~ .sidenav b {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    /*Adding delay to link animation - in multiples of .08s*/
+    /*One can use jQuery also for creating the delayed effect. But I will stick to manual CSS for this walkthrough.*/
+
+    #tm:checked ~ .sidenav li:nth-child(1) b {
+        transition-delay: 0.04s;
+    }
+    #tm:checked ~ .sidenav li:nth-child(2) b {
+        transition-delay: 0.08s;
+    }
+    #tm:checked ~ .sidenav li:nth-child(3) b {
+        transition-delay: 0.12s;
+    }
+    #tm:checked ~ .sidenav li:nth-child(4) b {
+        transition-delay: 0.16s;
+    }
+    #tm:checked ~ .sidenav li:nth-child(5) b {
+        transition-delay: 0.2s;
+    }
+    #tm:checked ~ .sidenav li:nth-child(6) b {
+        transition-delay: 0.24s;
+    }
+    #tm:checked ~ .sidenav li:nth-child(7) b {
+        transition-delay: 0.28s;
+    }
+    #tm:checked ~ .sidenav li:nth-child(8) b {
+        transition-delay: 0.32s;
+    }
+    /* 动画效果的手机端菜单栏 end */
+    
 	.box {
 		width: auto;
 		margin: 0 auto;
@@ -514,6 +652,9 @@ footer a{
 	.cont-box article {
 		display: block;
 	}
+    .listspan span {
+        margin: 8px 5px;
+    }
 
 	/*footer*/
 	.footer_box{
