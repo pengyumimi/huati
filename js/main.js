@@ -73,4 +73,19 @@ $(document).ready(function () {
     }, function () {
         $(this).children("a").fadeOut();
     })
-})	
+});
+
+/*
+$(document).click(function(event) { 
+    //$(".pcsidenav").hide();  
+});  */
+
+$(document).scroll(function() {
+	//$(".pcsidenav").hide(); 
+	$("#tm").attr('checked','false') ;
+});
+
+
+$("#tm").change(function() {
+    //alert($(this).is(':checked'));//判断当前状态
+});
